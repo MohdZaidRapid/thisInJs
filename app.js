@@ -26,13 +26,53 @@ window.x(); //window
 
 // this inside a object's method
 // the of value this is object in current object
+const student = {
+  name: "zaid",
+  printName: function () {
+    console.log(this.name);
+  },
+};
+
+student.printName();
+
+const student2 = {
+  name: "Mohammad",
+};
+
+student.printName.call(student2); //value of this student
+
+// const obj = {
+//   a: 10,
+//   x:fucntion() {
+//     console.log(this);
+//   },
+// };
+
+console.log(this);
+
 const obj = {
   a: 10,
-  x: function () {
-    console.log(this.a);
+  x: () => {
+    console.log(this); //global object
   },
 };
 
 obj.x();
 
+// /
+const obj2 = {
+  a: 20,
+  x: function () {
+    // enclosing lexical context
+    const y = () => {
+      console.log(this);
+    };
+    y();
+  },
+};
 
+obj2.x();
+
+// this inside dom element =>refrence element
+
+// this inside class ,constructor
