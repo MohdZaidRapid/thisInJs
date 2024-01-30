@@ -12,10 +12,27 @@ function x() {
   //   the value depends on strict and nonstrict mode
   console.log(this);
 }
-x();
+
+// strict mode
+x(); //undefined
+window.x(); //window
 
 // this is strict mode -(this substitution)
 
 // if value of this keyword is undefined or null
 // this will be replaced with global object
-// only in non stric mode
+// only in non strict mode
+// this value depends on how the function is called
+
+// this inside a object's method
+// the of value this is object in current object
+const obj = {
+  a: 10,
+  x: function () {
+    console.log(this.a);
+  },
+};
+
+obj.x();
+
+
