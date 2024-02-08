@@ -15,19 +15,45 @@ const test = new Test();
 // 2. This inside the class
 
 // 3. This inside the Object
-console.log(this);
+// console.log(this);
+
+// const User = {
+//   name: "John",
+//   age: 24,
+//   email: "zaid@gmail,com",
+//   password: "slkdls",
+//   hashPassword: function () {
+//     this.password = "asdsdsd";
+//   },
+// };
+
+// const obj = {
+//   a: 1,
+//   //   b: 2,
+//   //   c: 3,
+//   func1: function () {
+//     // this.b = params;
+//     const sds = () => {
+//       console.log(this);
+//     };
+//     sds();
+//   },
+// };
+
+// obj.func1();
 
 const obj = {
-  a: 1,
-  //   b: 2,
-  //   c: 3,
-  func1: function () {
-    // this.b = params;
-    const sds = () => {
-      console.log(this);
-    };
-    sds();
+  name: "John",
+  age: 30,
+  asd() {
+    console.log(this);
   },
 };
 
-obj.func1();
+function asd() {
+  console.log(this);
+}
+
+asd();
+// console.log(this);
+// obj.asd();
