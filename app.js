@@ -76,3 +76,4 @@ obj2.x();
 // this inside dom element =>refrence element
 
 // this inside class ,constructor
+ // this is outside constructor
